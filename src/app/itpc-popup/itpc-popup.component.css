@@ -1,0 +1,73 @@
+.modal-dialog {
+  margin: auto;
+}
+
+.modal-text {
+  font-weight: bold;
+  font-size: 15px;
+  color: black;
+}
+
+.modal-header {
+  background-color: rgb(212, 210, 210);
+}
+
+.icons {
+  display: flex;
+  /* grid-template-columns: auto auto; */
+  margin-left: 80px;
+  padding-top: 30px;
+}
+.icon1 {
+  height: 80px;
+  width: 80px;
+}
+.icon2 {
+  height: 80px;
+  width: 110px;
+  /* border: black solid 1px; */
+}
+.icon3 {
+  height: 80px;
+  width: 80px;
+}
+
+.itpcData {
+  display: flex;
+  margin-left: 70px;
+  padding-top: 30px;
+}
+.itpcDataCol1 {
+  height: 50px;
+  width: 100px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+.itpcDataCol2 {
+  height: 50px;
+  width: 100px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: right;
+}
+.itpcDataCol3 {
+  height: 50px;
+  width: 100px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 13px;
+  text-align: right;
+}
+
+.Revision {
+  color: red;
+}
+
+/* .modal-header {
+  background-color: rgb(241, 209, 4);
+}
+.modal-title {
+  color: white;
+}  */

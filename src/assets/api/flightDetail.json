@@ -1,0 +1,216 @@
+{
+  "vols": [
+    {
+      "arrivalFlight": "AC1005",
+      "fromAirport": "CDG",
+      "previewTime": "12:00",
+      "firstBagTime": "12:45",
+      "arrivalTime": "12:20",
+      "toAirport": "BRU",
+      "departureTime": "15:00",
+      "departureFlight": "AC1200",
+      "nbOfBagArrived": "40"
+    },
+    {
+      "arrivalFlight": "AC1005",
+      "fromAirport": "CDG",
+      "previewTime": "12:00",
+      "firstBagTime": "12:45",
+      "arrivalTime": "12:20",
+      "toAirport": "BRU",
+      "departureTime": "15:00",
+      "departureFlight": "AC5877",
+      "nbOfBagArrived": "78"
+    },
+
+    {
+      "arrivalFlight": "AC7850",
+      "fromAirport": "BCN",
+      "previewTime": "08:40",
+      "firstBagTime": "08:45",
+      "arrivalTime": "08:40",
+      "toAirport": "BRU",
+      "departureTime": "15:00",
+      "departureFlight": "AC1200",
+      "nbOfBagArrived": "70"
+    },
+    {
+      "arrivalFlight": "ACLI0",
+      "fromAirport": "BER",
+      "previewTime": "11:40",
+      "firstBagTime": "12:15",
+      "arrivalTime": "12:05",
+      "toAirport": "CDG",
+      "departureTime": "12:00",
+      "departureFlight": "AC1005",
+      "nbOfBagArrived": "64"
+    },
+    {
+      "arrivalFlight": "AC1100",
+      "fromAirport": "BRU",
+      "previewTime": "17:00",
+      "firstBagTime": "17:15",
+      "arrivalTime": "16:30",
+      "toAirport": "ORL",
+      "departureTime": "20:00",
+      "departureFlight": "TS0123",
+      "nbOfBagArrived": "60"
+    },
+
+    {
+      "arrivalFlight": "HONLI0",
+      "fromAirport": "HKG",
+      "previewTime": "05:40",
+      "firstBagTime": "05:50",
+      "arrivalTime": "05:40",
+      "toAirport": "PAR",
+      "departureTime": "09:00",
+      "departureFlight": "FR1150",
+      "nbOfBagArrived": "85"
+    },
+    {
+      "arrivalFlight": "AC2014",
+      "fromAirport": "BER",
+      "previewTime": "03:40",
+      "firstBagTime": "04:30",
+      "arrivalTime": "04:20",
+      "toAirport": "LIS",
+      "departureTime": "14:00",
+      "departureFlight": "TS4470",
+      "nbOfBagArrived": "75"
+    },
+    {
+      "arrivalFlight": "USL780",
+      "fromAirport": "LAS",
+      "previewTime": "12:40",
+      "firstBagTime": "13:50",
+      "arrivalTime": "13:40",
+      "toAirport": "BCN",
+      "departureTime": "16:00",
+      "departureFlight": "AC7850",
+      "nbOfBagArrived": "126"
+    },
+    {
+      "arrivalFlight": "AC7900",
+      "fromAirport": "BCN",
+      "previewTime": "08:40",
+      "firstBagTime": "-",
+      "arrivalTime": "08:45",
+      "toAirport": "MAD",
+      "departureTime": "11:00",
+      "departureFlight": "AC4680",
+      "nbOfBagArrived": "25"
+    },
+
+    {
+      "arrivalFlight": "AC0850",
+      "fromAirport": "BCN",
+      "previewTime": "17:40",
+      "firstBagTime": "-",
+      "arrivalTime": "17:40",
+      "toAirport": "TLV",
+      "departureTime": "22:00",
+      "departureFlight": "AC0851",
+      "nbOfBagArrived": "30"
+    },
+    {
+      "arrivalFlight": "FR1150",
+      "fromAirport": "PAR",
+      "previewTime": "17:40",
+      "firstBagTime": "-",
+      "arrivalTime": "-",
+      "toAirport": "BER",
+      "departureTime": "20:00",
+      "departureFlight": "AC0700",
+      "nbOfBagArrived": "35"
+    },
+    {
+      "arrivalFlight": "AC4600",
+      "fromAirport": "MAD",
+      "previewTime": "15:45",
+      "firstBagTime": "16:00",
+      "arrivalTime": "15:50",
+      "toAirport": "BCN",
+      "departureTime": "18:00",
+      "departureFlight": "AC7850",
+      "nbOfBagArrived": "55"
+    },
+    {
+      "arrivalFlight": "USL90",
+      "fromAirport": "NYO",
+      "previewTime": "11:40",
+      "firstBagTime": "12:10",
+      "arrivalTime": "12:00",
+      "toAirport": "LIS",
+      "departureTime": "14:00",
+      "departureFlight": "TS0850",
+      "nbOfBagArrived": "25"
+    },
+    {
+      "arrivalFlight": "AC0851",
+      "fromAirport": "TLV",
+      "previewTime": "19:40",
+      "firstBagTime": "19:50",
+      "arrivalTime": "19:40",
+      "toAirport": "NYO",
+      "departureTime": "23:00",
+      "departureFlight": "US2501",
+      "nbOfBagArrived": "60"
+    },
+    {
+      "arrivalFlight": "TS9963",
+      "fromAirport": "ORL",
+      "previewTime": "21:40",
+      "firstBagTime": "21:50",
+      "arrivalTime": "21:45",
+      "toAirport": "MAD",
+      "departureTime": "23:00",
+      "departureFlight": "AC4600",
+      "nbOfBagArrived": "15"
+    },
+    {
+      "arrivalFlight": "AC1200",
+      "fromAirport": "MAD",
+      "previewTime": "10:00",
+      "firstBagTime": "10:35",
+      "arrivalTime": "10:05",
+      "toAirport": "CDG",
+      "departureTime": "12:00",
+      "departureFlight": "AC1005",
+      "nbOfBagArrived": "140"
+    },
+    {
+      "arrivalFlight": "TS0123",
+      "fromAirport": "ORL",
+      "previewTime": "18:40",
+      "firstBagTime": "-",
+      "arrivalTime": "18:50",
+      "toAirport": "LIS",
+      "departureTime": "20:00",
+      "departureFlight": "TS0850",
+      "nbOfBagArrived": "80"
+    },
+    {
+      "arrivalFlight": "AC0700",
+      "fromAirport": "BER",
+      "previewTime": "19:40",
+      "firstBagTime": "-",
+      "arrivalTime": "19:50",
+      "toAirport": "LIS",
+      "departureTime": "20:00",
+      "departureFlight": "TS0850",
+      "nbOfBagArrived": "120"
+    },
+    {
+      "arrivalFlight": "TS0850",
+      "fromAirport": "LIS",
+      "previewTime": "19:40",
+      "firstBagTime": "-",
+      "arrivalTime": "19:50",
+      "toAirport": "TLV",
+      "departureTime": "22:00",
+      "departureFlight": "AC0851",
+      "nbOfBagArrived": "80"
+    }
+  ]
+}

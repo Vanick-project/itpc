@@ -1,0 +1,7 @@
+*, ::before, ::after{
+    box-sizing: border-box;
+    /*zoom: 150%;*/
+  }
+  body{
+    /*font-family: Verdana, Helvetica, sans-serif;*/
+  }

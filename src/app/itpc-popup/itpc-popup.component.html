@@ -1,0 +1,53 @@
+<div class="modal-header">
+  <!--Modal title: name of the airport -->
+  <div></div>
+  <h4 class="modal-title text-center" *ngIf="itpcUsFlights.length > 0">
+    {{ itpcUsFlights[0].airport }}
+  </h4>
+  <div></div>
+</div>
+<!---->
+<div class="modal-body text-center modal-text" *ngIf="itpcUsFlights.length > 0">
+  <!--Vol arriving data-->
+  <div>{{ itpcUsFlights[0].arrFlight }}</div>
+  <div>Prévu à {{ itpcUsFlights[0].estimatedTime.slice(10) }}</div>
+  <div [ngClass]="{ Revision: itpcUsFlights[0].schedTime != '-' }">
+    Révisé à {{ itpcUsFlights[0].schedTime.slice(10) }}
+  </div>
+  <div>Arrivé à {{ itpcUsFlights[0].arrTime.slice(10) }}</div>
+  <div>1 bag à - {{ itpcUsFlights[0].firstBag.slice(10) }}</div>
+  <div class="icons">
+    <div class="icon1"></div>
+
+    <div>
+      <img src="./assets/images/suitcase.png" alt="" class="icon1" />
+      <h6>
+        {{ itpcUsFlights[0].usBagIn }} photos/
+        {{ itpcUsFlights[0].NumberBagArr }} BSM
+      </h6>
+    </div>
+    <div class="icon3"></div>
+  </div>
+  <div class="itpcData" *ngFor="let usFlight of itpcUsFlights">
+    <!--US VOL departure detail-->
+    <div class="itpcDataCol1">
+      <div>{{ usFlight.NumberUsBagIn }} / {{ usFlight.NumberUsBag }}</div>
+    </div>
+    <div class="itpcDataCol2"></div>
+    <div class="itpcDataCol3">
+      <div>{{ usFlight.usFlight }}</div>
+      <div style="padding-right: 10px">{{ usFlight.dest }}</div>
+      <div style="padding-right: 10px">{{ usFlight.etd }}</div>
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button
+    type="button"
+    class="btn btn-danger"
+    data-bs-dismiss="modal"
+    (click)="closeModal()"
+  >
+    Fermer
+  </button>
+</div>

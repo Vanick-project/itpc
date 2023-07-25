@@ -1,0 +1,152 @@
+{
+  "flight": [
+    {
+      "fromAirport": "CDG",
+      "arrivalFlight": "AC1005",
+      "std": "15:40",
+      "status": "ARR",
+      "firstBagTime": "15:45",
+      "nbOfBagArrived": "6/23"
+    },
+    {
+      "fromAirport": "BRU",
+      "arrivalFlight": "AC1100",
+      "std": "15:40",
+      "status": "DEL",
+      "firstBagTime": "-",
+      "nbOfBagArrived": "0/30"
+    },
+    {
+      "fromAirport": "MAD",
+      "arrivalFlight": "AC1200",
+      "std": "16:45",
+      "status": "ARR",
+      "firstBagTime": "-",
+      "nbOfBagArrived": "0/73"
+    },
+    {
+      "fromAirport": "ORL",
+      "arrivalFlight": "TS0123",
+      "std": "18:40",
+      "status": "At time",
+      "firstBagTime": "-",
+      "nbOfBagArrived": "0/60"
+    },
+
+    {
+      "fromAirport": "BCN",
+      "arrivalFlight": "AC0850",
+      "std": "17:40",
+      "status": "At time",
+      "firstBagTime": "-",
+      "nbOfBagArrived": "0/70"
+    },
+    {
+      "fromAirport": "LIS",
+      "arrivalFlight": "TS0850",
+      "std": "19:40",
+      "status": "DEL",
+      "firstBagTime": "-",
+      "nbOfBagArrived": "0/80"
+    },
+    {
+      "fromAirport": "TLV",
+      "arrivalFlight": "AC0851",
+      "std": "19:40",
+      "status": "ARR",
+      "firstBagTime": "19:50",
+      "nbOfBagArrived": "38/40"
+    },
+    {
+      "fromAirport": "BER",
+      "arrivalFlight": "AC0700",
+      "std": "19:40",
+      "status": "DEL",
+      "firstBagTime": "19:50",
+      "nbOfBagArrived": "38/40"
+    },
+    {
+      "fromAirport": "BER",
+      "arrivalFlight": "ACLI0",
+      "std": "11:40",
+      "status": "DEL",
+      "firstBagTime": "11:50",
+      "nbOfBagArrived": "20/40"
+    },
+    {
+      "fromAirport": "NYO",
+      "arrivalFlight": "USL90",
+      "std": "11:40",
+      "status": "DEL",
+      "firstBagTime": "11:50",
+      "nbOfBagArrived": "15/40"
+    },
+    {
+      "fromAirport": "BCN",
+      "arrivalFlight": "AC7850",
+      "std": "08:40",
+      "status": "At time",
+      "firstBagTime": "-",
+      "nbOfBagArrived": "0/70"
+    },
+
+    {
+      "fromAirport": "MAD",
+      "arrivalFlight": "AC4600",
+      "std": "15:45",
+      "status": "ARR",
+      "firstBagTime": "-",
+      "nbOfBagArrived": "0/25"
+    },
+    {
+      "fromAirport": "ORL",
+      "arrivalFlight": "TS9963",
+      "std": "21:40",
+      "status": "At time",
+      "firstBagTime": "21:50",
+      "nbOfBagArrived": "0/50"
+    },
+
+    {
+      "fromAirport": "PAR",
+      "arrivalFlight": "FR1150",
+      "std": "17:40",
+      "status": "At time",
+      "firstBagTime": "-",
+      "nbOfBagArrived": "0/70"
+    },
+
+    {
+      "fromAirport": "BER",
+      "arrivalFlight": "AC2014",
+      "std": "03:40",
+      "status": "DEL",
+      "firstBagTime": "04:30",
+      "nbOfBagArrived": "38/40"
+    },
+    {
+      "fromAirport": "HKG",
+      "arrivalFlight": "HONLI0",
+      "std": "05:40",
+      "status": "At time",
+      "firstBagTime": "05:50",
+      "nbOfBagArrived": "20/40"
+    },
+    {
+      "fromAirport": "LAS",
+      "arrivalFlight": "USL780",
+      "std": "12:40",
+      "status": "DEL",
+      "firstBagTime": "13:50",
+      "nbOfBagArrived": "15/40"
+    },
+    {
+      "fromAirport": "BCN",
+      "arrivalFlight": "AC7900",
+      "std": "08:40",
+      "status": "At time",
+      "firstBagTime": "-",
+      "nbOfBagArrived": "0/70"
+    }
+  ]
+}

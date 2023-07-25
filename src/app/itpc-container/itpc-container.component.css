@@ -1,0 +1,66 @@
+.bgColor {
+  color: #f8f9fa;
+  background-color: #0d7ffd;
+}
+.table > tbody > tr {
+  font-weight: bold;
+  /*height : 35px;*/
+  /*height : 4.64vh;*/
+  font-size: 15px;
+  /*height : 2.5vh;*/
+  padding: 0px;
+  cursor: pointer;
+}
+.table > tbody > tr:hover {
+  background-color: #0d7ffd !important; /* Couleur de fond au survol */
+  color: #f8f9fa; /* Couleur du texte au survol */
+}
+
+.table > tbody > tr:nth-last-of-type(odd) {
+  background-color: #f8f9fa;
+}
+.table > tbody > tr:nth-last-of-type(even) {
+  background-color: #d3d3d3;
+}
+.table > thead > tr {
+  font-size: 18px;
+}
+
+.vertival {
+  vertical-align: middle;
+}
+
+@keyframes blinking {
+  0% {
+    background-color: #e64343ff;
+  }
+}
+.changed {
+  animation: blinking 1s 10;
+}
+
+.full {
+  background-color: #31f1ff;
+}
+
+@keyframes blinkingOrder {
+  0% {
+    background-color: #e64343ff;
+  }
+}
+
+.blinkArr {
+  animation: blinkingOrder 1s 10;
+}
+.blinkEnd {
+  background-color: #31f1ff;
+}
+
+.custom-column {
+  width: 250px;
+  text-align: center;
+}
+.custom-column2 {
+  width: 150px;
+  text-align: center;
+}

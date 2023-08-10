@@ -22,7 +22,7 @@
   height: 80px;
   width: 80px;
 }
-.icon2-width-110 {
+.icon-width-110 {
   height: 80px;
   width: 110px;
   /* border: black solid 1px; */
@@ -61,8 +61,12 @@
   /* text-align: right; */
 }
 
-.Revision {
+.revisedTime {
   color: red;
+}
+
+.pad-10 {
+  padding-right: 10px;
 }
 
 /* .modal-header {

@@ -16,10 +16,10 @@ export interface ItpcFlight2 {
   tag: string;
   type: string;
   usFlight: string;
-  NumberBag: number;
-  NumberUsBagIn: number;
+  numberBag: number;
+  numberUsBagIn: number;
   firstBag: string;
-  NumberBagArr: number;
-  NumberUsBag: number;
+  numberBagArr: number;
+  numberUsBag: number;
   usBagIn: number;
 }

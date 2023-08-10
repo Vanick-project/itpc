@@ -61,7 +61,7 @@ export class ItpcContainerComponent implements OnInit {
     }
   }
 
-  //function the signal when the vol are coming
+  //function the signal when the Flights are coming
   timingVol(Time: string) {
     const dataTime = new Date(Time);
     const differenceTime =

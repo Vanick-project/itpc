@@ -11,11 +11,11 @@
   <!--Vol arriving data-->
   <div>{{ itpcUsFlights[0].arrivalFlight }}</div>
   <div>Prévu à {{ itpcUsFlights[0].schedTime.slice(10) }}</div>
-  <div [ngClass]="{ Revision: itpcUsFlights[0].schedTime != '-' }">
+  <div [ngClass]="{ revisedTime: itpcUsFlights[0].schedTime != '-' }">
     Révisé à {{ itpcUsFlights[0].estTime.slice(10) }}
   </div>
   <div>Arrivé à {{ itpcUsFlights[0].arrTime.slice(10) }}</div>
-  <div>1 bag à - {{ itpcUsFlights[0].firstBag.slice(10) }}</div>
+  <div>1 bag à - {{ itpcUsFlights[0].firstBag.slice(11) }}</div>
   <div class="icons">
     <div class="icon-width-80"></div>
 
@@ -23,7 +23,7 @@
       <img src="./assets/images/suitcase.png" alt="" class="icon-width-80" />
       <h6>
         {{ itpcUsFlights[0].usBagIn }} photos/
-        {{ itpcUsFlights[0].NumberBagArr }} BSM
+        {{ itpcUsFlights[0].numberBagArr }} BSM
       </h6>
     </div>
     <div class="icon-width-80"></div>
@@ -31,13 +31,13 @@
   <div class="itpcData" *ngFor="let usFlight of itpcUsFlights">
     <!--US VOL departure detail-->
     <div class="itpcBagNumber">
-      <div>{{ usFlight.NumberUsBagIn }} / {{ usFlight.NumberUsBag }}</div>
+      <div>{{ usFlight.numberUsBagIn }} / {{ usFlight.numberUsBag }}</div>
     </div>
     <div class="itpcDataCol"></div>
     <div class="itpcUsDetail">
       <div>{{ usFlight.usFlight }}</div>
-      <div style="padding-right: 10px">{{ usFlight.usDest }}</div>
-      <div style="padding-right: 10px">{{ usFlight.usEtd }}</div>
+      <div class="pad-10">{{ usFlight.usDest }}</div>
+      <div class="pad-10">{{ usFlight.usEtd }}</div>
     </div>
   </div>
 </div>

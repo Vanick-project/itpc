@@ -30,25 +30,6 @@
   vertical-align: middle;
 }
 
-/* @keyframes blinking {
-  0% {
-    background-color: #e64343ff;
-  }
-}
-.changed {
-  animation: blinking 1s 10;
-}
-
-.full {
-  background-color: #31f1ff;
-}
-
-@keyframes blinkingOrder {
-  0% {
-    background-color: #e64343ff;
-  }
-} */
-
 .blinkArr {
   animation: blinkingOrder 1s 10;
 }

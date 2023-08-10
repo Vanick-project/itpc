@@ -33,12 +33,12 @@ export class ItpcPopupComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.itpcDetail2);
 
-    if (this.itpcDetail2 && this.itpcDetail2.arrFlight) {
-      this.loadVolDetailList(this.itpcDetail2.arrFlight);
+    if (this.itpcDetail2 && this.itpcDetail2.arrivalFlight) {
+      this.loadVolDetailList(this.itpcDetail2.arrivalFlight);
     }
   }
 
-  // loading the list of vol with the id = arrFlight from the api
+  // loading the list of vol with the id = arrivalFlight from the api
   loadVolDetailList(id: string): void {
     this.itpcArrivalFlight.loadUsVolDetailListHttp(id).subscribe(
       (arrivalVolDetail2) => {
@@ -54,9 +54,9 @@ export class ItpcPopupComponent implements OnInit {
 
   getVolDetailFromFlight(): void {
     if (this.arrivalVolDetail2) {
-      this.search = this.itpcDetail2.arrFlight;
+      this.search = this.itpcDetail2.arrivalFlight;
       for (let i = 0; i < this.arrivalVolDetail2.length; i++) {
-        if (this.arrivalVolDetail2[i].arrFlight === this.search) {
+        if (this.arrivalVolDetail2[i].arrivalFlight === this.search) {
           this.indexes.push(i);
           this.itpcUsFlights.push(this.arrivalVolDetail2[i]);
           console.log('Error getting the vol detail list');

@@ -55,6 +55,9 @@
 .blinkEnd {
   background-color: #31f1ff;
 }
+.noblink {
+  background-color: none;
+}
 
 .custom-column {
   width: 250px;

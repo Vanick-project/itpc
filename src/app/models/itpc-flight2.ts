@@ -1,16 +1,16 @@
 export interface ItpcFlight2 {
   id: number;
-  airport: string;
-  arrFlight: string;
+  orig_airport: string;
+  arrivalFlight: string;
   arrTime: string;
-  bagArrivedOrder: number;
+
   date: string;
-  dest: string;
-  estimatedTime: string;
-  etd: string;
-  flightArrivedOrder: number;
+  usDest: string;
+  estTime: string;
+  usEtd: string;
+
   old_etd: string;
-  scan_photo: string;
+  photo: string;
   schedTime: string;
   status: number;
   tag: string;

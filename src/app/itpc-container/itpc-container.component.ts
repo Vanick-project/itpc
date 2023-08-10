@@ -18,7 +18,7 @@ export class ItpcContainerComponent implements OnInit {
 
   sourceInterval: any = [];
   subscribeInterval: any = [];
-  id!: string;
+  // id!: string;
   public itpcDetail!: ItpcFlight2; // public because it is exporting the data to the child component pop-up
 
   //ItpcDataArrivalFlightService and modalService are injected in the constructor

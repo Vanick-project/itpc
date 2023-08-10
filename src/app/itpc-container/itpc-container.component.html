@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!--
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
   </head>
   <body>
     <section>
@@ -16,9 +19,9 @@
             <tr class="vertival">
               <th>Origine</th>
               <th>Vol</th>
-              <th class="custom-column">STD</th>
-              <th class="custom-column">Status</th>
-              <th class="custom-column2">Premier Bag</th>
+              <th class="width-250">STD</th>
+              <th class="width-250">Status</th>
+              <th class="width-150">Premier Bag</th>
               <th>Nb de bag</th>
             </tr>
           </thead>
@@ -32,21 +35,21 @@
               <td>{{ arrivalFlight.orig_airport }}</td>
               <td
                 [ngClass]="{
-                  full: timingVol(arrivalFlight.schedTime) == 1,
-                  changed: timingVol(arrivalFlight.schedTime) == 2
+                  blinkEnd: timingVol(arrivalFlight.schedTime) == 1,
+                  blinkArr: timingVol(arrivalFlight.schedTime) == 2
                 }"
               >
                 {{ arrivalFlight.arrivalFlight }}
               </td>
-              <td class="custom-column">
+              <td class="width-250">
                 {{ arrivalFlight.schedTime.slice(10) }}
               </td>
-              <td class="custom-column">
+              <td class="width-250">
                 {{ arrivalFlight.status }}
               </td>
 
               <td
-                class="custom-column"
+                class="width-250"
                 [ngClass]="{
                   blinkEnd: timingBagArr(arrivalFlight.firstBag) == true,
                   blinkArr: timingBagArr(arrivalFlight.firstBag) == false
@@ -60,11 +63,14 @@
             </tr>
           </tbody>
         </table>
-        <script
+        <!--<script
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
           crossorigin="anonymous"
-        ></script>
+        ></script>-->
+        <script>
+          src = "/assets/js/bootstrap.min.js";
+        </script>
       </div>
     </section>
   </body>

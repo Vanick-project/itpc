@@ -30,7 +30,7 @@
   vertical-align: middle;
 }
 
-@keyframes blinking {
+/* @keyframes blinking {
   0% {
     background-color: #e64343ff;
   }
@@ -47,7 +47,7 @@
   0% {
     background-color: #e64343ff;
   }
-}
+} */
 
 .blinkArr {
   animation: blinkingOrder 1s 10;
@@ -59,11 +59,11 @@
   background-color: none;
 }
 
-.custom-column {
+.width-250 {
   width: 250px;
   text-align: center;
 }
-.custom-column2 {
+.width-150 {
   width: 150px;
   text-align: center;
 }

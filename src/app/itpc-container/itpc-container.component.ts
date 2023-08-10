@@ -12,12 +12,14 @@ import { ItpcFlight2 } from '../models/itpc-flight2';
   styleUrls: ['./itpc-container.component.css'],
 })
 export class ItpcContainerComponent implements OnInit {
-  arrivalFlightData: any = [];
+  currenTime: any;
+
+  arrivalFlightData: any = []; //initialisation of the list arriving Vol
 
   sourceInterval: any = [];
   subscribeInterval: any = [];
   id!: string;
-  public itpcDetail!: ItpcFlight2;
+  public itpcDetail!: ItpcFlight2; // public because it is exporting the data to the child component pop-up
 
   //ItpcDataArrivalFlightService and modalService are injected in the constructor
   //This ensures the instanciation of the services
@@ -34,14 +36,43 @@ export class ItpcContainerComponent implements OnInit {
      * @the reactive js INTERVAL needs to be imported as shown above
      * @data is being retrieved from the function getDataArrival within the service itpcArrivalFlight
      */
+    timer(0, 100).subscribe(() => {
+      this.currenTime = new Date();
+    });
     this.sourceInterval = interval(2000);
     this.subscribeInterval = this.sourceInterval.subscribe(() => {
       //invoke the function getDataArrival
-
       console.log('data Arrival from component container!');
-
       this.arrivalFlightData = this.itpcArrivalFlight?.loadVolDetailListHttp();
     });
+  }
+
+  //function to signal when the bag are arriving
+  timingBagArr(Time: string) {
+    if (Time != '') {
+      const dataTime = new Date(Time);
+      const differenceTime =
+        (this.currenTime.getTime() - dataTime.getTime()) / (1000 * 60);
+      if (0 <= differenceTime && differenceTime <= 10) {
+        return false;
+      } else {
+        return true;
+      }
+    }
+  }
+
+  //function the signal when the vol are coming
+  timingVol(Time: string) {
+    const dataTime = new Date(Time);
+    const differenceTime =
+      (this.currenTime.getTime() - dataTime.getTime()) / (1000 * 60);
+    if (0 <= differenceTime) {
+      return 1;
+    } else if (-10 < differenceTime && differenceTime < 0) {
+      return 2;
+    } else {
+      return 0; // Default value if none of the conditions are met
+    }
   }
 
   /*this create a modal with the popupComponent

@@ -24,39 +24,39 @@
           </thead>
           <tbody>
             <tr
-              *ngFor="let arrFlight of arrivalFlightData; let index = index"
+              *ngFor="let arrivalFlight of arrivalFlightData; let index = index"
               class="vertival"
               (click)="openModal(index)"
             >
               <!--Itpc data displayed-->
-              <td>{{ arrFlight.airport }}</td>
+              <td>{{ arrivalFlight.orig_airport }}</td>
               <td
                 [ngClass]="{
-                  full: arrFlight.flightArrivedOrder == 3,
-                  changed:
-                    arrFlight.flightArrivedOrder > 0 &&
-                    arrFlight.flightArrivedOrder < 3
+                  full: timingVol(arrivalFlight.schedTime) == 1,
+                  changed: timingVol(arrivalFlight.schedTime) == 2
                 }"
               >
-                {{ arrFlight.arrFlight }}
+                {{ arrivalFlight.arrivalFlight }}
               </td>
-              <td class="custom-column">{{ arrFlight.schedTime.slice(10) }}</td>
               <td class="custom-column">
-                {{ arrFlight.status }}
+                {{ arrivalFlight.schedTime.slice(10) }}
               </td>
+              <td class="custom-column">
+                {{ arrivalFlight.status }}
+              </td>
+
               <td
                 class="custom-column"
                 [ngClass]="{
-                  blinkEnd:
-                    arrFlight.bagArrivedOrder == 3 && arrFlight.firstBag != 0,
-                  blinkArr:
-                    arrFlight.bagArrivedOrder > 0 &&
-                    arrFlight.bagArrivedOrder < 3
+                  blinkEnd: timingBagArr(arrivalFlight.firstBag) == true,
+                  blinkArr: timingBagArr(arrivalFlight.firstBag) == false
                 }"
               >
-                <span>{{ arrFlight.firstBag.slice(10) }}</span>
+                <span>{{ arrivalFlight.firstBag.slice(11) }}</span>
               </td>
-              <td>{{ arrFlight.NumberIn }} sur {{ arrFlight.NumberBag }}</td>
+              <td>
+                {{ arrivalFlight.NumberIn }} sur {{ arrivalFlight.NumberBag }}
+              </td>
             </tr>
           </tbody>
         </table>

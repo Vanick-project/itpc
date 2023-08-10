@@ -85,6 +85,6 @@ export class ItpcContainerComponent implements OnInit {
       keyboard: true,
       backdrop: 'static',
       windowClass: 'myCustomModalClass',
-    }).componentInstance.itpcDetail2 = this.arrivalFlightData[index]);
+    }).componentInstance.itpcDetail = this.arrivalFlightData[index]);
   }
 }

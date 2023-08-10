@@ -12,15 +12,15 @@ import { ItpcFlight2 } from '../models/itpc-flight2';
 })
 export class ItpcPopupComponent implements OnInit {
   // creating a table with the ItpcFlight2 as type
-  arrivalVolDetail2: ItpcFlight2[] = [];
+  arrivalVolDetail: ItpcFlight2[] = [];
 
   //importing the data fromparent components itpc-container
-  @Input() public itpcDetail2!: ItpcFlight2;
+  @Input() public itpcDetail!: ItpcFlight2;
 
   search: string = '';
 
   private indexes: number[] = [];
-  itpcUsFlights: ItpcFlight2[] = [];
+  itpcUsFlights: ItpcFlight2[] = []; // innitialisation list of us flight
 
   constructor(
     public activeModal: NgbActiveModal,
@@ -28,22 +28,22 @@ export class ItpcPopupComponent implements OnInit {
   ) {}
 
   /*
-    Set up the component after Angular sets the input properties using the itpcDetail2 input
+    Set up the component after Angular sets the input properties using the itpcDetail input
   */
   ngOnInit(): void {
-    console.log(this.itpcDetail2);
+    console.log(this.itpcDetail);
 
-    if (this.itpcDetail2 && this.itpcDetail2.arrivalFlight) {
-      this.loadVolDetailList(this.itpcDetail2.arrivalFlight);
+    if (this.itpcDetail && this.itpcDetail.arrivalFlight) {
+      this.loadVolDetailList(this.itpcDetail.arrivalFlight);
     }
   }
 
   // loading the list of vol with the id = arrivalFlight from the api
   loadVolDetailList(id: string): void {
     this.itpcArrivalFlight.loadUsVolDetailListHttp(id).subscribe(
-      (arrivalVolDetail2) => {
-        this.arrivalVolDetail2 = arrivalVolDetail2;
-        console.log(typeof this.arrivalVolDetail2);
+      (arrivalVolDetail) => {
+        this.arrivalVolDetail = arrivalVolDetail;
+        console.log(typeof this.arrivalVolDetail);
         this.getVolDetailFromFlight();
       },
       (error) => {
@@ -53,12 +53,12 @@ export class ItpcPopupComponent implements OnInit {
   }
 
   getVolDetailFromFlight(): void {
-    if (this.arrivalVolDetail2) {
-      this.search = this.itpcDetail2.arrivalFlight;
-      for (let i = 0; i < this.arrivalVolDetail2.length; i++) {
-        if (this.arrivalVolDetail2[i].arrivalFlight === this.search) {
+    if (this.arrivalVolDetail) {
+      this.search = this.itpcDetail.arrivalFlight;
+      for (let i = 0; i < this.arrivalVolDetail.length; i++) {
+        if (this.arrivalVolDetail[i].arrivalFlight === this.search) {
           this.indexes.push(i);
-          this.itpcUsFlights.push(this.arrivalVolDetail2[i]);
+          this.itpcUsFlights.push(this.arrivalVolDetail[i]);
           console.log('Error getting the vol detail list');
         }
       }

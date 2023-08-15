@@ -324,9 +324,9 @@ select:disabled {
 [type="button"],
 [type="reset"],
 [type="submit"],
-button {
+/* button {
   -webkit-appearance: button;
-}
+} */
 [type="button"]:not(:disabled),
 [type="reset"]:not(:disabled),
 [type="submit"]:not(:disabled),
@@ -374,10 +374,10 @@ legend + * {
 ::-webkit-inner-spin-button {
   height: auto;
 }
-[type="search"] {
+/* [type="search"] {
   outline-offset: -2px;
   -webkit-appearance: textfield;
-}
+} */
 ::-webkit-search-decoration {
   -webkit-appearance: none;
 }
@@ -2066,7 +2066,7 @@ textarea.form-control-lg {
   float: left;
   margin-left: -1.5em;
 }
-.form-check-input {
+/* .form-check-input {
   width: 1em;
   height: 1em;
   margin-top: 0.25em;
@@ -2081,7 +2081,7 @@ textarea.form-control-lg {
   appearance: none;
   -webkit-print-color-adjust: exact;
   color-adjust: exact;
-}
+} */
 .form-check-input[type="checkbox"] {
   border-radius: 0.25em;
 }

@@ -6,7 +6,7 @@
   font-weight: bold;
   /*height : 35px;*/
   /*height : 4.64vh;*/
-  font-size: 15px;
+  font-size: 20px;
   /*height : 2.5vh;*/
   padding: 0px;
   cursor: pointer;
@@ -23,7 +23,7 @@
   background-color: #d3d3d3;
 }
 .table > thead > tr {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .vertival {

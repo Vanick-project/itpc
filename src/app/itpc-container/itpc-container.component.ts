@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ItpcDataArrivalFlightService } from '../itpc-data-arrival-flight.service';
 import { Observable, interval, of, timer, tap, delay } from 'rxjs';
-
+import { parse } from 'date-fns';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ItpcPopupComponent } from '../itpc-popup/itpc-popup.component';
 import { ItpcFlight2 } from '../models/itpc-flight2';
@@ -49,11 +49,11 @@ export class ItpcContainerComponent implements OnInit {
 
   //function to signal when the bag are arriving
   timingBagArr(Time: string) {
-    if (Time != '') {
-      const dataTime = new Date(Time);
+    if (Time !== '' && Time !== '-') {
+      const dataTime = parse(Time, 'yyyy-MM-dd_HH:mm:ss', new Date());
       const differenceTime =
         (this.currenTime.getTime() - dataTime.getTime()) / (1000 * 60);
-      if (0 <= differenceTime && differenceTime <= 10) {
+      if (0 <= differenceTime && differenceTime <= 20) {
         return false;
       } else {
         return true;

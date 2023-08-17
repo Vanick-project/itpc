@@ -1,6 +1,6 @@
 .bgColor {
-  color: #f8f9fa;
-  background-color: #0d7ffd;
+  color: #f8f9fa !important;
+  background-color: #0d7ffd !important;
 }
 .table > tbody > tr {
   font-weight: bold;
@@ -22,6 +22,11 @@
 .table > tbody > tr:nth-last-of-type(even) {
   background-color: #d3d3d3;
 }
+/*.table-striped > tbody > tr:nth-child(even) > td,
+.table-striped > tbody > tr:nth-child(even) > th {
+  background-color: #cecccc;
+  z-index: 10;
+}*/
 .table > thead > tr {
   font-size: 20px;
 }
@@ -30,11 +35,19 @@
   vertical-align: middle;
 }
 
+@keyframes blinkingOrder {
+  0% {
+    background-color: #e64343ff;
+  }
+}
+
 .blinkArr {
   animation: blinkingOrder 1s 10;
+  z-index: 100000;
 }
 .blinkEnd {
   background-color: #31f1ff;
+  z-index: 100000;
 }
 .noblink {
   background-color: none;
@@ -47,4 +60,7 @@
 .width-150 {
   width: 150px;
   text-align: center;
+}
+.table-primary {
+  background-color: #0d7ffd;
 }

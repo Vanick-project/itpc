@@ -53,11 +53,11 @@ export class ItpcContainerComponent implements OnInit {
       const dataTime = parse(Time, 'yyyy-MM-dd_HH:mm:ss', new Date());
       const differenceTime =
         (this.currenTime.getTime() - dataTime.getTime()) / (1000 * 60);
-      if (0 <= differenceTime && differenceTime <= 20) {
-        return false;
-      } else {
-        return true;
-      }
+      if (0 <= differenceTime && differenceTime <= 2) {
+        return 1;
+      } else if (differenceTime > 20) {
+        return 2;
+      } else return 0;
     }
   }
 

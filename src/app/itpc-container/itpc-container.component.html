@@ -14,7 +14,7 @@
   <body>
     <section>
       <div class="container-main">
-        <table class="table table-condensed table-hover">
+        <table class="table table-condensed table-striped table-hover">
           <thead class="bgColor">
             <tr class="vertival">
               <th>Origine</th>
@@ -33,17 +33,21 @@
             >
               <!--Itpc data displayed-->
               <td>{{ arrivalFlight.orig_airport }}</td>
-              <td
-                [ngClass]="{
-                  blinkEnd:
-                    timingVol(arrivalFlight.schedTime) == 1 &&
-                    arrivalFlight.status == 'ARR',
-                  blinkArr:
-                    timingVol(arrivalFlight.schedTime) == 2 &&
-                    arrivalFlight.status == 'ARR'
-                }"
-              >
-                {{ arrivalFlight.arrivalFlight }}
+              <td>
+                <span
+                  ><div
+                    [ngClass]="{
+                      blinkEnd:
+                        timingVol(arrivalFlight.schedTime) == 1 &&
+                        arrivalFlight.status == 'ARR',
+                      blinkArr:
+                        timingVol(arrivalFlight.schedTime) == 2 &&
+                        arrivalFlight.status == 'ARR'
+                    }"
+                  >
+                    {{ arrivalFlight.arrivalFlight }}
+                  </div></span
+                >
               </td>
               <td class="width-250">
                 {{ arrivalFlight.schedTime.slice(10) }}
@@ -52,18 +56,20 @@
                 {{ arrivalFlight.status }}
               </td>
 
-              <td
-                class="width-250"
-                [ngClass]="{
-                  blinkEnd:
-                    timingBagArr(arrivalFlight.firstBag) == true &&
-                    arrivalFlight.status == 'ARR',
-                  blinkArr:
-                    timingBagArr(arrivalFlight.firstBag) == false &&
-                    arrivalFlight.status == 'ARR'
-                }"
-              >
-                <span>{{ arrivalFlight.firstBag.slice(11) }}</span>
+              <td>
+                <div
+                  class="width-250"
+                  [ngClass]="{
+                    blinkEnd:
+                      timingBagArr(arrivalFlight.firstBag) == 2 &&
+                      arrivalFlight.status == 'ARR',
+                    blinkArr:
+                      timingBagArr(arrivalFlight.firstBag) == 1 &&
+                      arrivalFlight.status == 'ARR'
+                  }"
+                >
+                  <span>{{ arrivalFlight.firstBag.slice(11) }}</span>
+                </div>
               </td>
               <td>
                 {{ arrivalFlight.numberIn }} sur {{ arrivalFlight.numberBag }}

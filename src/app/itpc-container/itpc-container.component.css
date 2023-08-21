@@ -16,17 +16,17 @@
   color: #f8f9fa; /* Couleur du texte au survol */
 }
 
-.table > tbody > tr:nth-last-of-type(odd) {
+/*.table > tbody > tr:nth-last-of-type(odd) {
   background-color: #f8f9fa;
 }
 .table > tbody > tr:nth-last-of-type(even) {
   background-color: #d3d3d3;
-}
-/*.table-striped > tbody > tr:nth-child(even) > td,
-.table-striped > tbody > tr:nth-child(even) > th {
+}*/
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th {
   background-color: #cecccc;
   z-index: 10;
-}*/
+}
 .table > thead > tr {
   font-size: 20px;
 }
@@ -63,4 +63,8 @@
 }
 .table-primary {
   background-color: #0d7ffd;
+}
+
+span {
+  width: 400px;
 }

@@ -39,7 +39,7 @@ export class ItpcContainerComponent implements OnInit {
     timer(0, 100).subscribe(() => {
       this.currenTime = new Date();
     });
-    this.sourceInterval = interval(2000);
+    this.sourceInterval = interval(5000);
     this.subscribeInterval = this.sourceInterval.subscribe(() => {
       //invoke the function getDataArrival
       console.log('data Arrival from component container!');

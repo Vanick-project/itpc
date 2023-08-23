@@ -25,7 +25,9 @@
     Révisé à {{ itpcUsFlights[0].estTime.slice(10) }}
   </div>
   <div>Arrivé à {{ itpcUsFlights[0].arrTime.slice(10) }}</div>
-  <div>1 bag à - {{ itpcUsFlights[0].firstBag }}</div>
+  <div *ngIf="itpcUsFlights[0].firstBag != null">
+    1 bag à - {{ itpcUsFlights[0].firstBag.slice(10) }}
+  </div>
   <div class="icons">
     <div class="icon-width-80"></div>
 

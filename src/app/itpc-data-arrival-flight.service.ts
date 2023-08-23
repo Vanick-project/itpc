@@ -59,7 +59,7 @@ export class ItpcDataArrivalFlightService {
 
   //http to load itpc vol detail list
 
-  urlUsVolApi: string = environment.srv + '{id}';
+  urlUsVolApi: string = environment.srv + '/' + '{id}';
   getDataUsVolDetailHttp(id: string): Observable<ItpcFlight2[]> {
     const url = this.urlUsVolApi.replace('{id}', id);
     let params = new HttpParams();

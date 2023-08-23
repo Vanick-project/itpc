@@ -14,7 +14,7 @@ export class ItpcPopupComponent implements OnInit {
   // creating a table with the ItpcFlight2 as type
   arrivalVolDetail: ItpcFlight2[] = [];
 
-  //importing the data fromparent components itpc-container
+  //importing the data from parent components itpc-container
   @Input() public itpcDetail!: ItpcFlight2;
 
   search: string = '';

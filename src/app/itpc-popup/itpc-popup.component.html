@@ -1,12 +1,22 @@
 <div class="modal-header">
   <!--Modal title: name of the orig_airport -->
   <div></div>
+  <div
+    class="modal-title text-center loader"
+    *ngIf="itpcUsFlights.length === 0"
+  ></div>
   <h4 class="modal-title text-center" *ngIf="itpcUsFlights.length > 0">
     {{ itpcUsFlights[0].orig_airport }}
   </h4>
   <div></div>
 </div>
 <!---->
+<div
+  class="modal-body text-center modal-text"
+  *ngIf="itpcUsFlights.length === 0"
+>
+  <h6>Loading the data</h6>
+</div>
 <div class="modal-body text-center modal-text" *ngIf="itpcUsFlights.length > 0">
   <!--Vol arriving data-->
   <div>{{ itpcUsFlights[0].arrivalFlight }}</div>

@@ -39,7 +39,7 @@ export class ItpcContainerComponent implements OnInit {
     timer(0, 100).subscribe(() => {
       this.currenTime = new Date();
     });
-    this.sourceInterval = interval(5000);
+    this.sourceInterval = interval(10000);
     this.subscribeInterval = this.sourceInterval.subscribe(() => {
       //invoke the function getDataArrival
       console.log('data Arrival from component container!');
@@ -48,9 +48,9 @@ export class ItpcContainerComponent implements OnInit {
   }
 
   //function to signal when the bag are arriving
-  timingBagArr(Time: string) {
-    if (Time !== '' && Time !== '-') {
-      const dataTime = parse(Time, 'yyyy-MM-dd_HH:mm:ss', new Date());
+  timingBagArr(time: string) {
+    if (time !== '' && time !== '-') {
+      const dataTime = parse(time, 'yyyy-MM-dd_HH:mm:ss', new Date());
       const differenceTime =
         (this.currenTime.getTime() - dataTime.getTime()) / (1000 * 60);
       if (0 <= differenceTime && differenceTime <= 2) {
@@ -62,8 +62,8 @@ export class ItpcContainerComponent implements OnInit {
   }
 
   //function the signal when the Flights are coming
-  timingVol(Time: string) {
-    const dataTime = new Date(Time);
+  timingVol(time: string) {
+    const dataTime = new Date(time);
     const differenceTime =
       (this.currenTime.getTime() - dataTime.getTime()) / (1000 * 60);
     if (0 <= differenceTime) {

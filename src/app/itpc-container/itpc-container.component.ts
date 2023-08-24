@@ -39,9 +39,9 @@ export class ItpcContainerComponent implements OnInit {
     timer(0, 100).subscribe(() => {
       this.currenTime = new Date();
     });
-    this.sourceInterval = interval(10000);
+    this.sourceInterval = interval(2000);
     this.subscribeInterval = this.sourceInterval.subscribe(() => {
-      //invoke the function getDataArrival
+      //invoke the function loadVolDetailListHttps
       console.log('data Arrival from component container!');
       this.arrivalFlightData = this.itpcArrivalFlight?.loadVolDetailListHttp();
     });

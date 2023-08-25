@@ -1,5 +1,5 @@
 <div class="modal fade show d-block" id="myModal" data-bs-backdrop="static">
-  <div class="modal-dialog modal-lg">
+  <div class="modal-dialog modal-md">
     <div class="modal-content">
       <div class="modal-header">
         <!--Modal title: name of the orig_airport -->
@@ -34,7 +34,7 @@
         <div *ngIf="itpcUsFlights[0].firstBag != null">
           1 bag à - {{ itpcUsFlights[0].firstBag.slice(10) }}
         </div>
-        <div class="mov">
+        <div>
           <div class="icons">
             <div class="icon-width-80"></div>
 
@@ -53,7 +53,7 @@
           </div>
         </div>
 
-        <div class="mov">
+        <div>
           <div class="itpcData" *ngFor="let usFlight of itpcUsFlights">
             <!--US VOL departure detail-->
             <div class="itpcBagNumber">

@@ -92,3 +92,7 @@
     transform: rotate(360deg);
   }
 }
+
+.mov {
+  padding-left: 160px;
+}

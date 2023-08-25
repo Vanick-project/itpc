@@ -62,7 +62,7 @@ export class ItpcPopupComponent implements OnInit {
           console.log('Error getting the vol detail list');
         }
       }
-      console.log('hello', this.itpcUsFlights);
+      console.log(this.itpcUsFlights);
     }
   }
 

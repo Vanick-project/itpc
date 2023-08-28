@@ -4,6 +4,7 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { ItpcDataArrivalFlightService } from '../itpc-data-arrival-flight.service';
 
 import { ItpcFlight2 } from '../models/itpc-flight2';
+import { catchError, of, tap } from 'rxjs';
 
 @Component({
   selector: 'app-itpc-popup',
@@ -39,17 +40,33 @@ export class ItpcPopupComponent implements OnInit {
   }
 
   // loading the list of vol with the id = arrivalFlight from the api
+  // loadVolDetailList(id: string): void {
+  //   this.itpcArrivalFlight.loadUsVolDetailListHttp(id).subscribe(
+  //     (arrivalVolDetail) => {
+  //       this.arrivalVolDetail = arrivalVolDetail;
+  //       console.log(typeof this.arrivalVolDetail);
+  //       this.getVolDetailFromFlight();
+  //     },
+  //     (error) => {
+  //       console.log('Error loading vol detail list:', error);
+  //     }
+  //   );
+  // }
   loadVolDetailList(id: string): void {
-    this.itpcArrivalFlight.loadUsVolDetailListHttp(id).subscribe(
-      (arrivalVolDetail) => {
-        this.arrivalVolDetail = arrivalVolDetail;
-        console.log(typeof this.arrivalVolDetail);
-        this.getVolDetailFromFlight();
-      },
-      (error) => {
-        console.log('Error loading vol detail list:', error);
-      }
-    );
+    this.itpcArrivalFlight
+      .loadUsVolDetailListHttp(id)
+      .pipe(
+        tap((arrivalVolDetail) => {
+          this.arrivalVolDetail = arrivalVolDetail;
+          console.log(typeof this.arrivalVolDetail);
+          this.getVolDetailFromFlight();
+        }),
+        catchError((error) => {
+          console.log('Error loading vol detail list:', error);
+          return of(null); // You can return a default value or handle the error here
+        })
+      )
+      .subscribe();
   }
 
   getVolDetailFromFlight(): void {
@@ -59,7 +76,7 @@ export class ItpcPopupComponent implements OnInit {
         if (this.arrivalVolDetail[i].arrivalFlight === this.search) {
           this.indexes.push(i);
           this.itpcUsFlights.push(this.arrivalVolDetail[i]);
-          console.log('Error getting the vol detail list');
+          console.log('Adding vol detail to list');
         }
       }
       console.log(this.itpcUsFlights);

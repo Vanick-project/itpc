@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ItpcDataArrivalFlightService } from '../itpc-data-arrival-flight.service';
 import { Observable, interval, of, timer, tap, delay } from 'rxjs';
 import { parse } from 'date-fns';
@@ -11,7 +11,7 @@ import { ItpcFlight2 } from '../models/itpc-flight2';
   templateUrl: './itpc-container.component.html',
   styleUrls: ['./itpc-container.component.css'],
 })
-export class ItpcContainerComponent implements OnInit {
+export class ItpcContainerComponent implements OnInit, OnDestroy {
   currenTime: any;
 
   arrivalFlightData: any = []; //initialisation of the list arriving Vol
@@ -86,5 +86,10 @@ export class ItpcContainerComponent implements OnInit {
       backdrop: 'static',
       windowClass: 'myCustomModalClass',
     }).componentInstance.itpcDetail = this.arrivalFlightData[index]);
+  }
+
+  ngOnDestroy(): void {
+    this.sourceInterval.unsubscribe();
+    this.subscribeInterval.unsubscribe();
   }
 }

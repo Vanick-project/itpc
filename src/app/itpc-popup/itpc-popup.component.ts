@@ -4,7 +4,6 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { ItpcDataArrivalFlightService } from '../itpc-data-arrival-flight.service';
 
 import { ItpcFlight2 } from '../models/itpc-flight2';
-import { catchError, of, tap } from 'rxjs';
 
 @Component({
   selector: 'app-itpc-popup',
@@ -40,51 +39,62 @@ export class ItpcPopupComponent implements OnInit {
   }
 
   // loading the list of vol with the id = arrivalFlight from the api
-  // loadVolDetailList(id: string): void {
-  //   this.itpcArrivalFlight.loadUsVolDetailListHttp(id).subscribe(
-  //     (arrivalVolDetail) => {
-  //       this.arrivalVolDetail = arrivalVolDetail;
-  //       console.log(typeof this.arrivalVolDetail);
-  //       this.getVolDetailFromFlight();
-  //     },
-  //     (error) => {
-  //       console.log('Error loading vol detail list:', error);
-  //     }
-  //   );
-  // }
   loadVolDetailList(id: string): void {
-    this.itpcArrivalFlight
-      .loadUsVolDetailListHttp(id)
-      .pipe(
-        tap((arrivalVolDetail) => {
-          this.arrivalVolDetail = arrivalVolDetail;
-          console.log(typeof this.arrivalVolDetail);
-          this.getVolDetailFromFlight();
-        }),
-        catchError((error) => {
-          console.log('Error loading vol detail list:', error);
-          return of(null); // You can return a default value or handle the error here
-        })
-      )
-      .subscribe();
+    this.itpcArrivalFlight.loadUsVolDetailListHttp(id).subscribe(
+      (arrivalVolDetail) => {
+        this.arrivalVolDetail = arrivalVolDetail;
+        console.log(typeof this.arrivalVolDetail);
+        this.getVolDetailFromFlight();
+      },
+      (error) => {
+        console.log('Error loading vol detail list:', error);
+      }
+    );
   }
+  // loadVolDetailList(id: string): void {
+  //   this.itpcArrivalFlight
+  //     .loadUsVolDetailListHttp(id)
+  //     .pipe(
+  //       tap((arrivalVolDetail) => {
+  //         this.arrivalVolDetail = arrivalVolDetail;
+  //         console.log(typeof this.arrivalVolDetail);
+  //         this.getVolDetailFromFlight();
+  //       }),
+  //       catchError((error) => {
+  //         console.log('Error loading vol detail list:', error);
+  //         return of(null); // return a default value or handle the error here
+  //       })
+  //     )
+  //     .subscribe();
+  // }
 
+  // getVolDetailFromFlight(): void {
+  //   if (this.arrivalVolDetail) {
+  //     this.search = this.itpcDetail.arrivalFlight;
+  //     for (let i = 0; i < this.arrivalVolDetail.length; i++) {
+  //       if (this.arrivalVolDetail[i].arrivalFlight === this.search) {
+  //         this.indexes.push(i);
+  //         this.itpcUsFlights.push(this.arrivalVolDetail[i]);
+  //         console.log('Adding vol detail to list');
+  //       }
+  //     }
+  //     console.log(this.itpcUsFlights);
+  //   }
+  // }
   getVolDetailFromFlight(): void {
     if (this.arrivalVolDetail) {
       this.search = this.itpcDetail.arrivalFlight;
-      for (let i = 0; i < this.arrivalVolDetail.length; i++) {
-        if (this.arrivalVolDetail[i].arrivalFlight === this.search) {
-          this.indexes.push(i);
-          this.itpcUsFlights.push(this.arrivalVolDetail[i]);
-          console.log('Adding vol detail to list');
-        }
-      }
-      console.log(this.itpcUsFlights);
+
+      this.itpcUsFlights = this.arrivalVolDetail.filter(
+        (flight) => flight.arrivalFlight === this.search
+      );
+
+      console.log('Added vol details to list', this.itpcUsFlights);
     }
   }
 
   //function to close the modal
-  closeModal() {
+  closeModal(): void {
     this.activeModal.close();
   }
 }

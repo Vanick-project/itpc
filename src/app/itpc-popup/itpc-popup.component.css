@@ -4,7 +4,7 @@
 
 .modal-text {
   font-weight: bold;
-  font-size: 15px;
+  font-size: 10px;
   color: black;
 }
 
@@ -15,12 +15,19 @@
 .icons {
   display: flex;
   /* grid-template-columns: auto auto; */
-  margin-left: 80px;
-  padding-top: 30px;
+  margin-left: 10px;
+  padding-top: 5px;
+}
+.icons img {
+  width: 40px;
+  height: 40px;
+}
+.icons h6 {
+  font-size: 10px;
 }
 .icon-width-80 {
-  height: 80px;
-  width: 80px;
+  height: 40px;
+  width: 60px;
 }
 .icon-width-110 {
   height: 80px;
@@ -28,25 +35,25 @@
   /* border: black solid 1px; */
 }
 .icon-width-80 {
-  height: 80px;
+  height: 40px;
   width: 80px;
 }
 
 .itpcData {
   display: flex;
-  margin-left: 70px;
-  padding-top: 30px;
+  margin-left: 10px;
+  padding-top: 1px;
 }
 .itpcBagNumber {
   height: 50px;
   width: 100px;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: bold;
-  margin-top: 30px;
+  padding-top: 10px;
 }
 .itpcDataCol {
   height: 50px;
-  width: 100px;
+  width: 50px;
   font-size: 14px;
   font-weight: bold;
   text-align: right;
@@ -54,10 +61,10 @@
 .itpcUsDetail {
   height: 50px;
   width: 100px;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: bold;
   text-align: center;
-  margin-top: 13px;
+
   /* text-align: right; */
 }
 

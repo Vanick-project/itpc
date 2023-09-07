@@ -11,7 +11,7 @@ import { ItpcFlight2 } from '../models/itpc-flight2';
   templateUrl: './itpc-container.component.html',
   styleUrls: ['./itpc-container.component.css'],
 })
-export class ItpcContainerComponent implements OnInit, OnDestroy {
+export class ItpcContainerComponent implements OnInit {
   currenTime: any;
 
   arrivalFlightData: any = []; //initialisation of the list arriving Vol
@@ -81,15 +81,16 @@ export class ItpcContainerComponent implements OnInit, OnDestroy {
   openModal(index: number) {
     const modalRef = (this.modalService.open(ItpcPopupComponent, {
       scrollable: true,
-      size: 'md',
+      size: 'sm',
       keyboard: true,
       backdrop: 'static',
       windowClass: 'myCustomModalClass',
     }).componentInstance.itpcDetail = this.arrivalFlightData[index]);
+    console.log(modalRef);
   }
 
-  ngOnDestroy(): void {
-    this.sourceInterval.unsubscribe();
-    this.subscribeInterval.unsubscribe();
-  }
+  // ngOnDestroy(): void {
+  //   this.sourceInterval.unsubscribe();
+  //   this.subscribeInterval.unsubscribe();
+  // }
 }

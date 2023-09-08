@@ -43,6 +43,10 @@
   display: flex;
   margin-left: 10px;
   padding-top: 1px;
+  border-bottom: 2px solid rgba(215, 215, 228, 0.822);
+}
+hr {
+  border: 2px solid black;
 }
 .itpcBagNumber {
   height: 50px;

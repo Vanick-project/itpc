@@ -55,7 +55,7 @@ export class ItpcContainerComponent implements OnInit {
         (this.currenTime.getTime() - dataTime.getTime()) / (1000 * 60);
       if (0 <= differenceTime && differenceTime <= 2) {
         return 1;
-      } else if (differenceTime > 20) {
+      } else if (differenceTime > 10) {
         return 2;
       } else return 0;
     }
@@ -66,9 +66,9 @@ export class ItpcContainerComponent implements OnInit {
     const dataTime = new Date(time);
     const differenceTime =
       (this.currenTime.getTime() - dataTime.getTime()) / (1000 * 60);
-    if (0 <= differenceTime) {
+    if (5 <= differenceTime) {
       return 1;
-    } else if (-10 < differenceTime && differenceTime < 0) {
+    } else if (0 < differenceTime && differenceTime < 5) {
       return 2;
     } else {
       return 0; // Default value if none of the conditions are met

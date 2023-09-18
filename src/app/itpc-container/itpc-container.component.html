@@ -35,10 +35,10 @@
               <td>{{ arrivalFlight.orig_airport }}</td>
               <td
                 [ngClass]="{
-                  'bg-info':
+                  'bg-info bg-gradient bg-opacity-50':
                     timingVol(arrivalFlight.schedTime) == 1 &&
                     arrivalFlight.status == 'ARR',
-                  'bg-danger':
+                  'bg-danger bg-gradient bg-opacity-75':
                     timingVol(arrivalFlight.schedTime) == 2 &&
                     arrivalFlight.status == 'ARR'
                 }"
@@ -52,20 +52,18 @@
                 {{ arrivalFlight.status }}
               </td>
 
-              <td>
-                <div
-                  class="width-250"
-                  [ngClass]="{
-                    blinkEnd:
-                      timingBagArr(arrivalFlight.firstBag) == 2 &&
-                      arrivalFlight.status == 'ARR',
-                    blinkArr:
-                      timingBagArr(arrivalFlight.firstBag) == 1 &&
-                      arrivalFlight.status == 'ARR'
-                  }"
-                >
-                  <span>{{ arrivalFlight.firstBag.slice(11) }}</span>
-                </div>
+              <td
+                class="width-250"
+                [ngClass]="{
+                  'bg-info bg-gradient bg-opacity-50 ':
+                    timingBagArr(arrivalFlight.firstBag) == 2 &&
+                    arrivalFlight.status == 'ARR',
+                  'bg-danger bg-gradient bg-opacity-75':
+                    timingBagArr(arrivalFlight.firstBag) == 1 &&
+                    arrivalFlight.status == 'ARR'
+                }"
+              >
+                {{ arrivalFlight.firstBag.slice(11) }}
               </td>
               <td>
                 {{ arrivalFlight.numberIn }} sur {{ arrivalFlight.numberBag }}

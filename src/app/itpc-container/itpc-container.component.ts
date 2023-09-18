@@ -81,7 +81,7 @@ export class ItpcContainerComponent implements OnInit {
   openModal(index: number) {
     const modalRef = (this.modalService.open(ItpcPopupComponent, {
       scrollable: true,
-      size: 'sm',
+      size: 'md',
       keyboard: true,
       backdrop: 'static',
       windowClass: 'myCustomModalClass',

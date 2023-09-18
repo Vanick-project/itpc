@@ -33,21 +33,17 @@
             >
               <!--Itpc data displayed-->
               <td>{{ arrivalFlight.orig_airport }}</td>
-              <td>
-                <span
-                  ><div
-                    [ngClass]="{
-                      blinkEnd:
-                        timingVol(arrivalFlight.schedTime) == 1 &&
-                        arrivalFlight.status == 'ARR',
-                      blinkArr:
-                        timingVol(arrivalFlight.schedTime) == 2 &&
-                        arrivalFlight.status == 'ARR'
-                    }"
-                  >
-                    {{ arrivalFlight.arrivalFlight }}
-                  </div></span
-                >
+              <td
+                [ngClass]="{
+                  'bg-info':
+                    timingVol(arrivalFlight.schedTime) == 1 &&
+                    arrivalFlight.status == 'ARR',
+                  'bg-danger':
+                    timingVol(arrivalFlight.schedTime) == 2 &&
+                    arrivalFlight.status == 'ARR'
+                }"
+              >
+                {{ arrivalFlight.arrivalFlight }}
               </td>
               <td class="width-250">
                 {{ arrivalFlight.schedTime.slice(10) }}

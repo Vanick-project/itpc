@@ -11,8 +11,12 @@
   padding: 0px;
   cursor: pointer;
 }
-.table > tbody > tr:hover {
-  background-color: #0d7ffd !important; /* Couleur de fond au survol */
+/* .table > tbody > tr:hover {
+  background-color: #0d7ffd !important; 
+  color: #f8f9fa; 
+} */
+.table-hover tbody tr:hover td {
+  background: #0d7ffd; /* Couleur de fond au survol */
   color: #f8f9fa; /* Couleur du texte au survol */
 }
 

@@ -55,7 +55,7 @@ export class ItpcContainerComponent implements OnInit {
         (this.currenTime.getTime() - dataTime.getTime()) / (1000 * 60);
       if (0 <= differenceTime && differenceTime <= 2) {
         return 1;
-      } else if (differenceTime > 10) {
+      } else if (differenceTime > 2) {
         return 2;
       } else return 0;
     }
